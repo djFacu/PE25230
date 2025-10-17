@@ -86,5 +86,86 @@ html {
             text-shadow: 4px 4px 4px var(--color-secundario);
          }
       }
+
+      /* #producto { */
+      .container-product {
+         margin: 0 auto;
+         text-align: center;
+
+         h3 {
+            color: var(--color-text);
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 1rem 0;
+         }
+
+         .product {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+            gap: 2rem;
+            padding: 0 2rem;
+            justify-items: center;
+
+            .card {
+               width: 100%;
+               border: 1px solid black;
+               border-radius: 0.5rem;
+               background-color: var(--color-secundario);
+               box-shadow: 0 4px 4px rgb(53, 54, 53);
+               padding: 0.5rem;
+               /* transition: all 0.3s ease-in-out; */
+               transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+               
+               a {
+                  text-decoration: none;
+                  color: var(--color-text);
+
+                  h4 {
+                     font-size: 1.2rem;
+                  }
+
+                  img {
+                     width: 100%;
+                     margin: 0.5rem auto;
+                     border-radius: 0.5rem;
+                  }
+
+                  p {
+                     span {
+                        font-weight: 700;
+                        padding: 0.25rem;
+                        background-color: wheat;
+                        border-radius: 0.5rem;
+                     }
+                  }
+               }
+
+               button {
+                  margin-top: 0.75rem;
+                  padding: 0.5rem 1rem;
+                  border: none;
+                  border-radius: 0.5rem;
+                  background-color: var(--color-text);
+                  color: var(--color-principal);
+                  cursor: pointer;
+
+                  &:hover {
+                     background-color: var(--color-principal);
+                     color: var(--color-text);
+                     border: 1px solid var(--color-text);
+                  }
+               }
+
+               &:hover {
+                  transform: scale(1.1);
+                  box-shadow: 0 8px 8px rgb(53, 54, 53)  ;
+
+                  img {
+                     transform: scale(1.05);
+                  }
+               }
+            }
+         }
+      }
    }
 }
