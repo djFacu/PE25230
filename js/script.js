@@ -97,7 +97,8 @@ function limpiarCarrito() {
 }
 
 // traer los productos de mi API
-async function loadProduct() {
+//async function loadProduct() {
+const loadProduct = async() => {
    try {
       const response = await fetch('https://dummyjson.com/products');
       const data = await response.json();
@@ -109,8 +110,19 @@ async function loadProduct() {
       console.log('Error al cargar products', error);
    }
 }
-
-function printProducts(products) {
+/*  
+// Axios con async/await
+const loadProduct = async() => {
+   try {
+      const result = await axios.get('https://dummyjson.com/products');
+      console.log(result);
+   } catch (error) {
+      console.log('Mensaje de error: ', error)
+   }
+}
+*/
+//function printProducts(products) {
+const printProducts = (products) => {
    const container = document.getElementById('product-list');
 
    products.forEach(product => {
